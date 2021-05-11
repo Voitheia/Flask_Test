@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% if title %}
+        <title>Flask Test - {{ title }}</title>
+    {% else %}
+        <title>Flask Test</title>
+    {% endif %}
+</head>
+<body>
+    <h1>greeting this is home page</h1>
+    <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <p>theres no place like 127.0.0.1 :)))))))</p>
+
+    {% for post in posts %}
+        <h1>{{ post.title }}</h1>
+        <p>By {{ post.author}} on {{ post.date_posted}}</p>
+        <p>{{ post.content }}</p>
+    {% endfor %}
+</body>
+</html>
