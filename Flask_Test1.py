@@ -34,6 +34,41 @@ class Post(db.Model):
     def __repr__(self):
         return f"Post('{self.title}','{self.date_posted}')"
 
+#--------------------info about database stuff with python--------------------#
+#
+#run python
+#from <filename> import db (ex: from Flask_Test1 import db)
+#from <filename> import User, Post (ex: from Flask_Test1 import User, Post)
+#-these imports allow us to use the classes and db on the python command line
+#db.create_all()
+#-creates all the tables needed for the db
+#user_1 = User(username='bob', email='bob@gmail.com', password='password')
+#-this creates a user variable
+#db.session.add(user_1)
+#-this adds the user we created to the "stack" that is waiting to be committed to the db
+#user_2 = User(username='joe', email='joe@gmail.com', password='password')
+#db.session.add(user_2)
+#db.session.commit()
+#-commits the users we added to the "stack" to the db
+#User.query.all()
+#-querys the database for all users
+#User.query.first()
+#-gets the first user
+#User.query.filter_by(username='bob').all()
+#-querys the database for all users with username of 'bob'
+#user = User.query.filter_by(username='bob').first()
+#-puts the bob user into a variable of "user"
+#user
+#-will print out the information of the user in the user variable
+#user.id
+#-will print out the id of the user in the user variable
+#user = User.query.get(2)
+#-sets the user variable to the user of id 2
+#post_1 = Post(title='thingy', content='this has stuff in it yeee', user_id=user.id)
+#-makes a new post variable with information in it that has an author of the user variable
+#db.drop_all()
+#-drops all tables
+
 #this posts variable is a list of dictionaries, used as dummy data for blog posts
 #basically just a replacement for a database call
 posts = [
